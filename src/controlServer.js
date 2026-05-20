@@ -1,0 +1,65 @@
+import { WebSocketServer } from "ws";
+import { ControlMsgType } from "./protocol.js";
+
+export function createControlServer({ port, logger }) {
+  const wss = new WebSocketServer({ port });
+  const bots = new Map(); // name -> ws
+
+  // Drop control packets when the bot's socket buffer is congested. Better to
+  // skip a tick than queue a stale move command that arrives 200ms late.
+  const BACKPRESSURE_BYTES = 64 * 1024;
+  let warnedAt = 0;
+  function safeSend(ws, obj) {
+    if (ws.readyState !== ws.OPEN) return;
+    if (ws.bufferedAmount > BACKPRESSURE_BYTES) {
+      const now = Date.now();
+      if (now - warnedAt > 5000) {
+        warnedAt = now;
+        logger?.warn?.(`Control WS backpressure (buffered=${ws.bufferedAmount}B), dropping packet`);
+      }
+      return;
+    }
+    ws.send(JSON.stringify(obj));
+  }
+
+  wss.on("connection", (ws) => {
+    let botName = null;
+
+    ws.on("message", (data) => {
+      let msg;
+      try { msg = JSON.parse(String(data)); } catch { return; }
+
+      if (msg?.t === ControlMsgType.HELLO) {
+        botName = String(msg.name || "").trim();
+        if (!botName) return;
+        bots.set(botName, ws);
+        logger?.info?.(`Bot connected: ${botName}`);
+        return;
+      }
+      if (msg?.t === ControlMsgType.PING) {
+        safeSend(ws, { t: ControlMsgType.PONG, ts: Date.now() });
+      }
+    });
+
+    ws.on("close", () => {
+      if (botName && bots.get(botName) === ws) {
+        bots.delete(botName);
+        logger?.warn?.(`Bot disconnected: ${botName}`);
+      }
+    });
+  });
+
+  return {
+    url: `ws://127.0.0.1:${port}`,
+    sendToBot: (name, msg) => {
+      const ws = bots.get(name);
+      if (!ws) return false;
+      safeSend(ws, msg);
+      return true;
+    },
+    close: async () => {
+      for (const ws of bots.values()) { try { ws.close(); } catch {} }
+      await new Promise((resolve) => wss.close(resolve));
+    },
+  };
+}

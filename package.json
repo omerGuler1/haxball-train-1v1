@@ -1,0 +1,21 @@
+{
+  "name": "train-1v1",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Haxball 1v1 futsal training room with a single adversarial bot (chase-and-kick).",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "node -c src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.42.0"
+  }
+}
