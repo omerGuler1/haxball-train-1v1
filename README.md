@@ -27,3 +27,4 @@ node src/index.js
 ```
 
 When the room comes up you'll see a `Room link: https://www.haxball.com/play?c=…` line in the console — that's the link to share.
+https://media.discordapp.net/attachments/1490140020747796632/1506808255257776289/image.png?ex=6a1044cb&is=6a0ef34b&hm=8c30464189a699603f391cd4c4d8e9e1dc3cd0a85a0f0a46990c09f711a19505&=&format=webp&quality=lossless&width=1870&height=1314
