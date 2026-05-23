@@ -5,6 +5,8 @@
 **Canlı Oda:** 🦇🕸️ **Bats Training Bots v1** on Haxball  
 **Topluluk:** [Bats Training Bots Discord](https://discord.gg/z84TRaSVT)
 
+<img width="872" height="590" alt="image" src="https://github.com/user-attachments/assets/ef8429fc-ec6f-4f8f-ae02-f6c700a3fb26" />
+
 ---
 
 ## Genel Bakış
