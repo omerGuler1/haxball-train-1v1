@@ -1,6 +1,6 @@
 # Haxball 1v1 Training Bot
 
-🇬🇧 **English** | 🇹🇷 [Türkçe](./README_TR.md)
+🇬🇧 **English** | 🇹🇷 [Türkçe](./README.tr.md)
 
 A standalone, headless Haxball 1v1 training room powered by two Chrome instances playing competitive futsal. Perfect for practicing against a skilled adversarial bot in a dedicated environment.
 
