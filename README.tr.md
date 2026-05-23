@@ -1,4 +1,4 @@
-# 🦇 Haxball 1v1 Antrenman Botu
+# Haxball 1v1 Antrenman Botu
 
 İki Chrome örneğinin rekabetçi futsal oynadığı, bağımsız bir Haxball 1v1 antrenman odası. Özel bir ortamda yetenekli bir rakip bota karşı pratik yapın.
 
@@ -7,7 +7,7 @@
 
 ---
 
-## 📋 Genel Bakış
+## Genel Bakış
 
 Bu, Haxball 1v1 futsal için hafif ve kendi barındırılan bir antrenman odasıdır. İşte nasıl çalıştığı:
 
@@ -20,7 +20,7 @@ Bu, Haxball 1v1 futsal için hafif ve kendi barındırılan bir antrenman odası
 
 ---
 
-## 🚀 Hızlı Başlangıç
+## Hızlı Başlangıç
 
 ### Ön Koşullar
 - **Node.js** ≥ 18
@@ -68,7 +68,7 @@ Bu, Haxball 1v1 futsal için hafif ve kendi barındırılan bir antrenman odası
 
 ---
 
-## 📁 Proje Yapısı
+## Proje Yapısı
 
 ```
 haxball-train-1v1/
@@ -102,7 +102,7 @@ haxball-train-1v1/
 
 ---
 
-## 🎮 Nasıl Çalışır
+## Nasıl Çalışır
 
 ### Mimari
 
@@ -177,7 +177,7 @@ HEADLESS_TOKEN=your_headless_token_here
 
 ---
 
-## 📊 Kullanım İpuçları
+## Kullanım İpuçları
 
 ### Antrenman Öğrencileri İçin (Oyuncular)
 
@@ -195,7 +195,7 @@ HEADLESS_TOKEN=your_headless_token_here
 
 ---
 
-## 🛠️ Komut Dosyaları
+## Komut Dosyaları
 
 ```bash
 # Antrenman odasını başlatın
@@ -207,7 +207,7 @@ npm run lint
 
 ---
 
-## 🔧 Sorun Giderme
+## Sorun Giderme
 
 ### "Token geçersiz veya süresi dolmuş"
 - [https://www.haxball.com/headlesstoken](https://www.haxball.com/headlesstoken) adresinde yeni bir token oluşturun
@@ -230,7 +230,7 @@ npx puppeteer browsers install chrome
 
 ---
 
-## 📚 Gelişmiş Konular
+## Gelişmiş Konular
 
 ### Özel Bot Yapay Zekası
 
@@ -261,7 +261,7 @@ Host ve bot arasındaki WebSocket protokolü `protocol.js` dosyasında tanımlan
 
 ---
 
-## 🤝 Katkı Yapma
+## Katkı Yapma
 
 Bu, bir özel antrenman sisteminin topluluk versiyonudur. Katkılar, hata raporları ve özellik talepleri hoş karşılanır!
 
@@ -270,13 +270,13 @@ Bu, bir özel antrenman sisteminin topluluk versiyonudur. Katkılar, hata raporl
 
 ---
 
-## 📝 Lisans
+## Lisans
 
 Bu proje olduğu gibi sağlanır. Ayrıntılar için dahil edilen LICENSE dosyasını kontrol edin.
 
 ---
 
-## 🎯 Sonraki Adımlar
+## Sonraki Adımlar
 
 1. ✅ Bağımlılıkları yükleyin (`npm install`)
 2. ✅ Başsız bir token alın
