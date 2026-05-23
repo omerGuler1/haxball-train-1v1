@@ -1,5 +1,7 @@
 # Haxball 1v1 Antrenman Botu
 
+🇬🇧 [English](./README.md) | 🇹🇷 **Türkçe**
+
 İki Chrome örneğinin rekabetçi futsal oynadığı, bağımsız bir Haxball 1v1 antrenman odası. Özel bir ortamda yetenekli bir rakip bota karşı pratik yapın.
 
 **Canlı Oda:** 🦇🕸️ **Bats Training Bots v1** on Haxball  
